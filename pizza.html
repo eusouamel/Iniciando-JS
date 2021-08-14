@@ -1,12 +1,15 @@
+
 <!DOCTYPE html>
 <html>
 <body>
-Fazer uma página que peça o tipo da pizza (mussarela ou calabresa) e quantidade, depois peça o tipo de bebida (refrigerante ou suco) e calcule o valor a pagar.
-Apresente as fotos da pizza e bebida solicitadas
-
 <br>
-<script >
-
+<script>
+	//Uma página que peça o tipo da pizza (mussarela ou calabresa) e quantidade, depois peça o tipo de bebida (refrigerante ou suco) e calcule o valor a pagar.
+	//Apresentar as fotos da pizza e bebida solicitadas
+	//valor pizza mussarela: 25 reais / pizza calabresa: 35 reais
+	//valor refrigetante: 8 reais / suco: 10 reais
+	
+	//declaração de variáveis
 	var tipo="";
 		tipoBebida="";
 		quant = 0;
@@ -14,28 +17,24 @@ Apresente as fotos da pizza e bebida solicitadas
 		valorPagar_P= 0.0;
 		valorPagar_B=0.0;
 		valorTotal=0.0;
-
+	//entrada
 	tipo=prompt("Qual a pizza desejada: ", "");
+	//parseInt ou parseFloat convertem string para valor numérico
 	quant=parseInt(prompt("Digite a quantidade de pizza: ", ""));
 	tipoBebida=prompt("Qual a bebida desejada: ", "");
 	quantBebida=parseInt(prompt("Digite a quantidade de bebida: ", ""));
-
+	//condição
 	if(tipo=="mussarela"){
 		valorPagar_P = 25 * quant;
+		//saída
 		document.write("<p align=center> <img src=mussarela.png </p>");
-		//document.write("<p align=center> Total a pagar " + valorPagar + "</p>");
 		valorTotal = valorPagar_P + valorPagar_B;
-		//document.write("<p align=center> Total a pagar " + valorTotal + "</p>");
-
 	}
 	else
 		if(tipo=="calabresa"){
 			valorPagar_P = 35 * quant;
 		document.write("<p align=center> <img src=calabresa.png </p>");
-		//document.write("<p align=center> Total a pagar " + valorPagar + "</p>");
 		valorTotal = valorPagar_P + valorPagar_B;
-		//document.write("<p align=center> Total a pagar " + valorTotal + "</p>");
-
 		}
 			if(tipoBebida == "refrigerante"){
 				valorPagar_B = 8 * quant;
@@ -50,8 +49,6 @@ Apresente as fotos da pizza e bebida solicitadas
 					valorTotal = valorPagar_P + valorPagar_B;
 					document.write("<br><p align=center> Total a pagar: " + valorTotal + "</p>");
 				}
-
-
 
 </script>
 </body>
