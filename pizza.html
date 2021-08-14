@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+Fazer uma página que peça o tipo da pizza (mussarela ou calabresa) e quantidade, depois peça o tipo de bebida (refrigerante ou suco) e calcule o valor a pagar.
+Apresente as fotos da pizza e bebida solicitadas
+
+<br>
+<script >
+
+	var tipo="";
+		tipoBebida="";
+		quant = 0;
+		quantBebida = 0;
+		valorPagar_P= 0.0;
+		valorPagar_B=0.0;
+		valorTotal=0.0;
+
+	tipo=prompt("Qual a pizza desejada: ", "");
+	quant=parseInt(prompt("Digite a quantidade de pizza: ", ""));
+	tipoBebida=prompt("Qual a bebida desejada: ", "");
+	quantBebida=parseInt(prompt("Digite a quantidade de bebida: ", ""));
+
+	if(tipo=="mussarela"){
+		valorPagar_P = 25 * quant;
+		document.write("<p align=center> <img src=mussarela.png </p>");
+		//document.write("<p align=center> Total a pagar " + valorPagar + "</p>");
+		valorTotal = valorPagar_P + valorPagar_B;
+		//document.write("<p align=center> Total a pagar " + valorTotal + "</p>");
+
+	}
+	else
+		if(tipo=="calabresa"){
+			valorPagar_P = 35 * quant;
+		document.write("<p align=center> <img src=calabresa.png </p>");
+		//document.write("<p align=center> Total a pagar " + valorPagar + "</p>");
+		valorTotal = valorPagar_P + valorPagar_B;
+		//document.write("<p align=center> Total a pagar " + valorTotal + "</p>");
+
+		}
+			if(tipoBebida == "refrigerante"){
+				valorPagar_B = 8 * quant;
+				document.write("<p align=center> <img src=coca.jpg </p>");
+				valorTotal = valorPagar_P + valorPagar_B;
+				document.write("<br><br><br><br><br><p align=center> Total a pagar: " + valorTotal + "</p>");
+			}
+			else
+				if(tipoBebida == "suco"){
+					valorPagar_B = 10 * quant;
+					document.write("<br><br><br><br><br><p align=center><img src=suco.jfif </p>");
+					valorTotal = valorPagar_P + valorPagar_B;
+					document.write("<br><p align=center> Total a pagar: " + valorTotal + "</p>");
+				}
+
+
+
+</script>
+</body>
+</html>
